@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { LoginPage } from "./pages/login/loginPage.jsx";
-
+import "./index.css";
 
 function AppRoutes() {
   const routes = useRoutes([
