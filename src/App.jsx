@@ -1,12 +1,16 @@
-import "./App.css";
-import { Button } from "@nextui-org/react";
+import { useRoutes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import routes from "./routes.jsx";
 
-function App() {
+import "./App.css";
+
+export const App = () => {
+  const element = useRoutes(routes);
+
   return (
     <>
-      <Button color="primary">Button</Button>
+      {element}
+      <Toaster position="top-center" reverseOrder={false} />
     </>
   );
-}
-
-export default App;
+};
