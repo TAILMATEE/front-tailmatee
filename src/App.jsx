@@ -1,16 +1,27 @@
-import { useRoutes } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
-import routes from "./routes.jsx";
+/* eslint-disable no-unused-vars */
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useRoutes,
+} from "react-router-dom";
 
-import "./App.css";
+import { LoginPage } from "./pages/login/loginPage.jsx";
 
-export const App = () => {
-  const element = useRoutes(routes);
 
+function AppRoutes() {
+  const routes = useRoutes([
+    { path: "/", element: <LoginPage /> },
+  ]);
+  return routes;
+}
+
+function App() {
   return (
-    <>
-      {element}
-      <Toaster position="top-center" reverseOrder={false} />
-    </>
+    <Router>
+      <AppRoutes />
+    </Router>
   );
-};
+}
+
+export default App;
