@@ -18,13 +18,14 @@ module.exports = {
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
+        sansita: ['Sansita', 'sans-serif'],
       },
       fontSize: {
-        'h1': ['2.25rem', { lineHeight: '2.5rem', fontWeight: '900' }],
-        'h2': ['1.875rem', { lineHeight: '2.25rem', fontWeight: '700' }],
-        'h3': ['1.5rem', { lineHeight: '2rem', fontWeight: '700' }],
-        'bold': ['1rem', { lineHeight: '1.5rem', fontWeight: '700' }],
-        'text': ['1rem', { lineHeight: '1.5rem', fontWeight: '400' }],
+        'h1': ['2.25rem', { lineHeight: '2.5rem', fontWeight: '900' }], // Heading 1
+        'h2': ['1.875rem', { lineHeight: '2.25rem', fontWeight: '700' }], // Heading 2
+        'h3': ['1.5rem', { lineHeight: '2rem', fontWeight: '700' }], // Heading 3
+        'bold': ['1rem', { lineHeight: '1.5rem', fontWeight: '700' }], // Bold text
+        'text': ['1rem', { lineHeight: '1.5rem', fontWeight: '400' }], // Regular text
       }
     },
   },
