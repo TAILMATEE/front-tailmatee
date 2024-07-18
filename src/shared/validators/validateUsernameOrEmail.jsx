@@ -4,11 +4,11 @@ export const validateUsernameOrEmail = (usernameOrEmail) => {
   
       return regex.test(usernameOrEmail)
     } else {
-      const regex = /^\S{3,8}$/
+      const regex = /^\S{3,25}$/
   
       return regex.test(usernameOrEmail)
     }
   }
   
   export const validateUsernameOrEmailMessage =
-    'The username does not meet the necessary requirements (Username: 3 to 8 characters without spaces |Email: A email direction) '
+    'The username need to be between 3 and 25 characters long | The email need to be valid'
