@@ -1,11 +1,19 @@
 import { Nav } from "../../components/Nav.jsx";
-import { Form } from "../../components/Form.jsx";
+import { MessageRegister } from "../../components/register/MessageRegister.jsx";
+import { FormRegister } from "../../components/register/FormRegister.jsx";
 
 export const RegisterPage = () => {
   return (
     <>
       <Nav />
-      <Form />
+      <article className="flex justify-center gap-48">
+        <section className="content-center">
+          <MessageRegister />
+        </section>
+        <section className="justify-items-center">
+          <FormRegister />
+        </section>
+      </article>
     </>
   );
 };
