@@ -1,12 +1,23 @@
 import React from "react";
 import { Checkbox } from "@nextui-org/react";
 import { HeartIcon } from '../../assets/Icons/CardIcon/Like';
-import { Card, CardBody, CardFooter, Image, Avatar, Button } from "@nextui-org/react";
-import { Input } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Image, Avatar } from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
+import { Comments } from "./Comments";
 
 export const CardPost = () => {
 
     const variants = ["underlined",];
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [size, setSize] = React.useState('md')
+
+    const sizes = ["5xl"];
+
+    const handleOpen = (size) => {
+        setSize(size)
+        onOpen();
+    }
+
 
     const list = [
         {
@@ -59,19 +70,57 @@ export const CardPost = () => {
                             <Checkbox defaultSelected icon={<HeartIcon />}></Checkbox>
                         </div>
                         <p className="font-semibold text-default-400 text-small ml-4">97.1K</p>
-                        <Button className="text-tiny" color="none" radius="full" size="te">
-                            Ver comentarios
-                        </Button>
-                        <div className="w-full flex flex-col gap-4 ">
-                            {variants.map((variant) => (
-                                <div key={variant} className="flex w-full flex-wrap md:flex-nowrap mb-6 md:mb-0 gap-4">
-                                    <Input type="comment" variant={variant} placeholder="Comentar" />
-                                </div>
+                        <div className="flex flex-wrap gap-3">
+                            {sizes.map((size) => (
+                                <Button className="bg-white" key={size} onPress={() => handleOpen(size)}>Ver comentarios</Button>
                             ))}
                         </div>
+                        <Modal
+                            size={size}
+                            isOpen={isOpen}
+                            onClose={onClose}
+                        >
+                            <ModalContent>
+                                {(onClose) => (
+                                    <>
+                                        <ModalHeader className="flex items-center gap-5 mb-3">
+                                            <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
+                                            <p> Name User</p>
+                                        </ModalHeader>
+                                        <ModalBody >
+                                            <article className="flex">
+                                                <section className="w-1/2 mr-16">
+                                                    <Image
+                                                        isZoomed
+                                                        alt="NextUI Fruit Image with Zoom"
+                                                        radius="lg"
+                                                        className=""
+                                                        src="https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg"
+                                                        width="100%"
+                                                    />
+                                                </section>
+                                                <section className="w-1/2">
+                                                    <Comments />
+                                                </section>
+                                            </article>
+                                        </ModalBody>
+                                        {/* <ModalFooter>
+                                            <Button color="danger" variant="light" onPress={onClose}>
+                                                Close
+                                            </Button>
+                                            <Button color="primary" onPress={onClose}>
+                                                Action
+                                            </Button>
+                                        </ModalFooter> */}
+
+                                    </>
+                                )}
+                            </ModalContent>
+                        </Modal>
                     </CardFooter>
                 </Card>
-            ))}
-        </div>
+            ))
+            }
+        </div >
     );
 };
