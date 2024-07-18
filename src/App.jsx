@@ -8,12 +8,14 @@ import {
 
 import { LoginPage } from "./pages/login/loginPage.jsx";
 import { RegisterPage } from "./pages/register/registerPage.jsx";
+import { HomePage } from "./pages/homepage/homePage.jsx";
 import "./index.css";
 
 function AppRoutes() {
   const routes = useRoutes([
     { path: "/", element: <LoginPage /> },
     { path: "/register", element: <RegisterPage /> },
+    { path: "/home", element: <HomePage /> },
   ]);
   return routes;
 }
