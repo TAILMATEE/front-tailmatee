@@ -1,7 +1,9 @@
+import { NavHome } from "../../components/NavHome.jsx";
+
 export const HomePage = () => {
   return (
     <>
-    <h1></h1>
+      <NavHome />
     </>
   );
 };
