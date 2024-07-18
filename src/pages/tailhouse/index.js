@@ -1,1 +1,0 @@
-export { TailhousePage } from "./tailhousePage.jsx";

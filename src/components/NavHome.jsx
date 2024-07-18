@@ -34,7 +34,7 @@ export const NavHome = () => {
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="/tailhouse" aria-current="page" color="secondary">
+          <Link href="#" aria-current="page" color="secondary">
             Tailhouses / Adopción
           </Link>
         </NavbarItem>
