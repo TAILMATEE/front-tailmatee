@@ -26,7 +26,7 @@ module.exports = {
         'h3': ['1.5rem', { lineHeight: '2rem', fontWeight: '700' }], // Heading 3
         'bold': ['1rem', { lineHeight: '1.5rem', fontWeight: '700' }], // Bold text
         'text': ['1rem', { lineHeight: '1.5rem', fontWeight: '400' }], // Regular text
-      }
+      },
     },
   },
   darkMode: "class",
