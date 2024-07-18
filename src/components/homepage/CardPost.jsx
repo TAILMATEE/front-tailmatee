@@ -2,7 +2,9 @@ import React from "react";
 import { Checkbox } from "@nextui-org/react";
 import { HeartIcon } from '../../assets/Icons/CardIcon/Like';
 import { Card, CardBody, CardFooter, Image, Avatar } from "@nextui-org/react";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
+import { ScrollShadow } from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, Button, useDisclosure } from "@nextui-org/react";
+import { InputComment } from "./InputComment";
 import { Comments } from "./Comments";
 
 export const CardPost = () => {
@@ -23,7 +25,7 @@ export const CardPost = () => {
         {
             profile: "/images/profile-1.jpeg",
             title: "Oscar",
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5-6_BzWagEHVHRqV4Jfmfz7M4lq99jdl3IQ&s",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQQTQYDktR1rua2gBriTfJ9UuB8chmR24l0w&s",
         },
         {
             title: "Angel",
@@ -48,10 +50,10 @@ export const CardPost = () => {
     ];
 
     return (
-        <div className="gap-2 grid sm:grid-cols-1 w-80">
+        <div className="gap-2 grid sm:grid-cols-1 w-96">
             {list.map((item, index) => (
                 <Card shadow="sm" key={index} onPress={() => console.log("item pressed")}>
-                    <CardBody className="">
+                    <CardBody >
                         <div className="flex ml-5 mb-4 mt-4 items-center gap-4 ">
                             <Avatar isBordered radius="full" size="md" src="https://nextui.org/avatars/avatar-1.png" />
                             <b>{item.title}</b>
@@ -60,7 +62,6 @@ export const CardPost = () => {
                             shadow="sm"
                             width="100%"
                             radius="lg"
-                            alt={item.title}
                             className="w-96 h-100 object-cover"
                             src={item.img}
                         />
@@ -88,31 +89,24 @@ export const CardPost = () => {
                                             <p> Name User</p>
                                         </ModalHeader>
                                         <ModalBody >
-                                            <article className="flex">
-                                                <section className="w-1/2 mr-16">
+                                            <article className="flex h-80">
+                                                <section className="w-1/2 mr-16 flex items-center">
                                                     <Image
                                                         isZoomed
                                                         alt="NextUI Fruit Image with Zoom"
                                                         radius="lg"
-                                                        className=""
                                                         src="https://nextui-docs-v2.vercel.app/images/hero-card-complete.jpeg"
                                                         width="100%"
                                                     />
                                                 </section>
-                                                <section className="w-1/2">
-                                                    <Comments />
+                                                <section>
+                                                    <ScrollShadow className="w-full h-3/4">
+                                                        <Comments />
+                                                    </ScrollShadow>
+                                                    <InputComment className="h-1/4" />
                                                 </section>
                                             </article>
                                         </ModalBody>
-                                        {/* <ModalFooter>
-                                            <Button color="danger" variant="light" onPress={onClose}>
-                                                Close
-                                            </Button>
-                                            <Button color="primary" onPress={onClose}>
-                                                Action
-                                            </Button>
-                                        </ModalFooter> */}
-
                                     </>
                                 )}
                             </ModalContent>
