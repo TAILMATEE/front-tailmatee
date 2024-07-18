@@ -11,4 +11,4 @@ export const validateUsernameOrEmail = (usernameOrEmail) => {
   }
   
   export const validateUsernameOrEmailMessage =
-    'The username need to be between 3 and 25 characters long | The email need to be valid'
+    'El nombre de usuario debe tener entre 3 y 25 caracteres de longitud | El correo electrónico debe ser válido.'

@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 
 import { useNavigate } from 'react-router-dom';
 
-import { login as loginRequest } from '../../services/api';
+import { login as loginRequest, register as registerRequest} from '../../services/api';
 
 export const useAuth = () => {
 
@@ -12,6 +12,74 @@ export const useAuth = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const navigate = useNavigate();
+
+    const register = async (
+
+        name,
+        lastname,
+        username,
+        birthdate,
+        gender,
+        email,
+        password,
+        phone
+
+    ) => {
+
+        setIsLoading(true);
+
+        const response = await registerRequest({
+            
+            name,
+            lastname,
+            username,
+            birthdate,
+            gender,
+            email,
+            password,
+            phone
+
+        });
+
+        isLoading(false);
+
+        if (response.error) {
+            console.log(response.error);
+            console.log(response.e);
+            console.log(response.e?.response);
+            console.log(response.e?.response?.data);
+      
+            return toast.error(
+              response.e?.response?.data ||
+                "An error occurred, please try again later.",
+            );
+        }
+
+        toast.success(
+            (t) => (
+              <span>
+                {response.data.msg} <br />
+                <button
+                  onClick={() => toast.dismiss(t.id)}
+                  style={{
+                    background: "transparent",
+                    border: "none",
+                    position: "absolute",
+                    top: "0",
+                    right: "0",
+                    margin: "5px",
+                  }}
+                >
+                  X
+                </button>
+              </span>
+            ),
+            { duration: Infinity },
+        );
+
+        navigate('/');
+
+    }   
 
     const login = async (usernameOrEmail, password) => {
 
@@ -21,9 +89,16 @@ export const useAuth = () => {
 
         if(response.error && response.e){
 
+            console.log(response.error);
+            console.log(response.e);
+            console.log(response.e?.response);
+            console.log(response.e?.response?.data);
+
             setIsLoading(false);
 
-            return toast.error('Error, please try again or contact support');
+            return toast.error(
+                `${response.data.msg}`
+            );
 
         }
 
