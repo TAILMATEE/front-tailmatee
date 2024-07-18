@@ -10,13 +10,9 @@ export const GeneralInput = ({
     placeholder,
     onClear,
     className,
-    endContent,
     startContent,
-    value,
-    isInvalid,
     color,
-    errorMessage,
-    onValueChange,
+    labelPlacement
 }) => {
     return (
         <Input
@@ -30,6 +26,7 @@ export const GeneralInput = ({
             className={className}
             startContent={startContent}
             color={color}
+            labelPlacement={labelPlacement}
         />
     );
 }
