@@ -6,11 +6,12 @@ import {
   useRoutes,
 } from "react-router-dom";
 
+import "./index.css";
 import { LoginPage } from "./pages/login/loginPage.jsx";
 import { RegisterPage } from "./pages/register/registerPage.jsx";
 import { HomePage } from "./pages/homepage/homePage.jsx";
 import { DenouncementPage } from "./pages/denouncement/denouncementPage.jsx";
-import "./index.css";
+import { TailhousePage } from "./pages/tailhouse/tailhousePage.jsx";
 
 function AppRoutes() {
   const routes = useRoutes([
@@ -18,6 +19,7 @@ function AppRoutes() {
     { path: "/register", element: <RegisterPage /> },
     { path: "/home", element: <HomePage /> },
     { path: "/denouncement", element: <DenouncementPage /> },
+    { path: "/tailhouse", element: <TailhousePage /> },
   ]);
   return routes;
 }
