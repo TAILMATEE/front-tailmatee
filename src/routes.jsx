@@ -6,7 +6,7 @@ import { HomePage } from "./pages/homepage/homePage";
 
 const routes = useRoutes([
   { path: '/', element: <LoginPage /> },
-  { path: '/register', element: <RegisterPage /> }
+  { path: '/register', element: <RegisterPage /> },
   { path: '/home', element: <HomePage /> }
 ]);
 
