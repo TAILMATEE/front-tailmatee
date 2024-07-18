@@ -20,6 +20,10 @@ export const NavHome = () => {
     navigate("/");
   };
 
+  const handleProfile = () => {
+    navigate('/profile')
+  }
+
   return (
     <Navbar className="bg-yellow w-full h-24">
       <NavbarBrand>
@@ -63,7 +67,7 @@ export const NavHome = () => {
               <p className="font-semibold">Bienvenid@ 👋</p>
               <p className="font-semibold">zoey@example.com</p>
             </DropdownItem>
-            <DropdownItem key="settings">Mi perfil</DropdownItem>
+            <DropdownItem key="profile" onClick={handleProfile}>Mi perfil</DropdownItem>
             <DropdownItem key="logout" color="danger" onClick={handleLogout}>
               Cerrar Sesión
             </DropdownItem>
