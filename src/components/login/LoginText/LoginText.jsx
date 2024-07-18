@@ -3,7 +3,7 @@ import { Link } from "@nextui-org/react";
 
 export const LoginText = () => {
     return (
-        <article className="w-fit text-blue h-full content-center">
+        <article className="w-fit text-yellow h-full content-center">
             <h1 className="font-lato text-[50px] ml-2">Ingresa</h1>
             <section className="flex flew-row w-fit items-center mt-3 ml-2">
                 <h2 className="font-lato text-[35px] w-fit mr-3">Bienvenido de nuevo a</h2>

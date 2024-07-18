@@ -1,0 +1,49 @@
+import { GeneralInput } from '../../Input';
+import { MailIcon } from '../../../assets/Icons/FormIcons/MailIcon.jsx';
+import { Button } from "@nextui-org/react";
+import Password from '../../../assets/Icons/FormIcons/Password.svg';
+
+
+export const FormLogin = () => {
+    return (
+        <form className="w-[50%] h-full content-center basis-1/4">
+            <h1 className='font-lato text-[30px] font-bold text-center mb-[55px]'>
+                Inicia Sesión
+            </h1>
+            <section>
+                <GeneralInput
+                    type="email"
+                    label="Correo o Usuario"
+                    placeholder="Ingresa tu correo o usuario"
+                    isRequired
+                    className={"max-w-xs mt-[25px] min-w-96"}
+                    isClearable
+                    onClear={() => console.log("Clear")}
+                    startContent={
+                        <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" fill="#EAA023" />
+                    }
+                    color="default"
+                />
+                <GeneralInput
+                    type="password"
+                    label="Contraseña"
+                    placeholder="Ingresa tu contraseña"
+                    isRequired
+                    className={"max-w-xs mt-[25px] min-w-96"}
+                    color="default"
+                    isClearable
+                    startContent={
+                        <img src={Password} alt="Password" className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                    }
+                />
+                <Button
+                    radius="full"
+                    className="max-w-xs mt-[50px] min-w-96 h-[50px]"
+                    color="warning"
+                >
+                    Login
+                </Button>
+            </section>
+        </form>
+    );
+};
