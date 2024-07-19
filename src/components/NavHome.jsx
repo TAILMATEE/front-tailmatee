@@ -17,21 +17,27 @@ import { useAuth } from "../shared/hooks";
 export const NavHome = () => {
 
   const { logout } = useAuth();
+  
+  const navigate = useNavigate();
 
   const handleProfile = () => {
     navigate('/profile')
   }
 
+  const handleHome = () => {
+    navigate('/home')
+  }
+
   return (
     <Navbar className="bg-yellow w-full h-24">
-      <NavbarBrand>
+      <NavbarBrand onClick={handleHome} className="cursor-pointer">
         <img src={logo} alt="logo" className="w-[25px] h-[25px] mr-2.5" />
         <h1 className="font-sansita text-h3 text-blue">Tailmatee</h1>
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/home">
             Inicio
           </Link>
         </NavbarItem>
