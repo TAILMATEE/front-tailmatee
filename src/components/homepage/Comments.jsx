@@ -1,5 +1,3 @@
-import {ContentComment } from './ContentComment'
+import { ContentComment } from "./ContentComment";
 
-export const Comments = () => (
-    <ContentComment/>
-);
+export const Comments = () => <ContentComment />;

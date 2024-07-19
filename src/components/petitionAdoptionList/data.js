@@ -1,9 +1,8 @@
-import React from "react";
 const columns = [
-  {name: "Nombre", uid: "name"},
-  {name: "Animal", uid: "pet"},
-  {name: "Especie", uid: "specie"},
-  {name: "Acciones", uid: "actions"},
+  { name: "Nombre", uid: "name" },
+  { name: "Animal", uid: "pet" },
+  { name: "Especie", uid: "specie" },
+  { name: "Acciones", uid: "actions" },
 ];
 
 const users = [
@@ -20,4 +19,4 @@ const users = [
   },
 ];
 
-export {columns, users};
+export { columns, users };

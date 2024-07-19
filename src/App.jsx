@@ -33,10 +33,10 @@ function AppRoutes() {
     { path: "/denouncement", element: <DenouncementPage /> },
     { path: "/profile", element: <ProfilePage /> },
     { path: "/mytailfriends", element: <MyTailfriendsPage /> },
-    { path: "/petitionadoption", element: <PetitionAdoptionPage />},
+    { path: "/petitionadoption", element: <PetitionAdoptionPage /> },
     { path: "/admin", element: <AdminPage /> },
     { path: "/tailhouse-requests", element: <TailHouseRequestPage /> },
-    { path: "/tailhousepetition", element: <TailhousePetitionPage />}
+    { path: "/tailhousepetition", element: <TailhousePetitionPage /> },
   ]);
   return routes;
 }

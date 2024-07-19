@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Link } from "@nextui-org/react";
 
 export const ButtonAdoptionForm = () => {
@@ -13,4 +12,4 @@ export const ButtonAdoptionForm = () => {
       </Button>
     </Link>
   );
-}
+};
