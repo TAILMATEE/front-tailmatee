@@ -7,6 +7,8 @@ import { TailHouseDetail } from "./pages/tailHouseDetail/tailHouseDetail";
 import { AdoptionPage } from "./pages/adoption/adoptionPage";
 import { DenouncementPage } from "./pages/denouncement";
 import { ProfilePage } from "./pages/profile/profilePage";
+import { MyTailfriendsPage } from "./pages/myTailfriends/myTailfriendsPage";
+import { PetitionAdoptionPage } from "./pages/petitionAdoption/petitionAdoptionPage"; 
 
 const routes = useRoutes([
   { path: '/', element: <LoginPage /> },
@@ -17,6 +19,8 @@ const routes = useRoutes([
   { path: '/adoption', element: <AdoptionPage /> },
   { path: "/denouncement", element: <DenouncementPage /> },
   { path: "/profile", element: <ProfilePage /> },
+  { path: "/mytailfriends", element: <MyTailfriendsPage />},
+  { path: "/petitionadoption", element: <PetitionAdoptionPage />} 
 ]);
 
 

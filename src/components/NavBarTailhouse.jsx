@@ -11,8 +11,23 @@ import {
     Avatar,
 } from "@nextui-org/react";
 import logo from "../assets/img/logoWhite.svg";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../shared/hooks";
 
 export const NavBarTailhouse = () => {
+
+    const { logout } = useAuth();
+
+    const navigate = useNavigate();
+
+    const handleProfile = () => {
+        navigate("/profile");
+    };
+
+    const handleHome = () => {
+        navigate("/home");
+    };
+
     return (
         <Navbar className="bg-yellow w-full h-24">
             <NavbarBrand onClick={handleHome} className="cursor-pointer">
@@ -27,12 +42,12 @@ export const NavBarTailhouse = () => {
                     </Link>
                 </NavbarItem>
                 <NavbarItem isActive>
-                    <Link href="/tailhouse" aria-current="page" color="secondary">
+                    <Link href="/mytailfriends" aria-current="page" color="secondary">
                         My TailFriends
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="/denouncement">
+                    <Link color="foreground" href="/petitionadoption">
                         Peticiones de Adopción
                     </Link>
                 </NavbarItem>

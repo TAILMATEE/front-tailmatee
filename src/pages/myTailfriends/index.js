@@ -1,0 +1,1 @@
+import { MyTailfriendsPage } from "./myTailfriendsPage";
