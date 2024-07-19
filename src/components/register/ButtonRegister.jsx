@@ -1,16 +1,12 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { Button } from "@nextui-org/react";
 
-export const ButtonRegister = ({
-  
-  onClick
-
-}) => {
-
+export const ButtonRegister = ({ onClick }) => {
   const handleRegister = (event) => {
-
-    onClick(event.target.value, field)
-
-  }
+    onClick(event.target.value, field);
+  };
 
   return (
     <Button
@@ -22,4 +18,4 @@ export const ButtonRegister = ({
       Registrar
     </Button>
   );
-}
+};
