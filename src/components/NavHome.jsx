@@ -47,7 +47,7 @@ export const NavHome = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="foreground" href="/denouncement">
             Denuncia
           </Link>
         </NavbarItem>
