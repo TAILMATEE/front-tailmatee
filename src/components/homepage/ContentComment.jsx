@@ -49,7 +49,7 @@ export const ContentComment = () => {
             avatar: "https://avatars.githubusercontent.com/u/30373425?v=4",
             username: "jrgarciadev",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        },      
+        },
     ]
 
     return (
@@ -65,8 +65,6 @@ export const ContentComment = () => {
                             </div>
                         </div>
                     ))}
-                </div>
-                <div>
                 </div>
             </div>
         </section>

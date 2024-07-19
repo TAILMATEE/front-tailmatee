@@ -1,7 +1,21 @@
 import React from "react";
-import { Card, CardFooter, Image, Button, Link } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Image, Avatar } from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, Button, useDisclosure } from "@nextui-org/react";
+import { ScrollShadow } from "@nextui-org/react";
+import { InformationPet } from "../tailhousedetail/InformationPet";
+import { ButtonAdoption } from "./ButtonAdoption";
 
 export const ListPetsHouses = () => {
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [size, setSize] = React.useState('md')
+
+    const sizes = ["5xl"];
+
+    const handleOpen = (size) => {
+        setSize(size)
+        onOpen();
+    }
 
     const pets = [
         {
@@ -45,18 +59,49 @@ export const ListPetsHouses = () => {
                     <div>
                         <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
                             <p className="text-tiny text-white/80">{pet.name}</p>
-                            <Button
-                                className="text-tiny text-white bg-blue"
-                                variant="flat"
-                                color="secondary"
-                                radius="lg"
-                                size="sm"
-                                onClick={() => handlePetClick(pet.id)}
+                            <div className="flex flex-wrap gap-3">
+                                {sizes.map((size) => (
+                                    <Button className="bg-blue text-white" key={size} onPress={() => handleOpen(size)}>info</Button>
+                                ))}
+                            </div>
+                            <Modal
+                                size={size}
+                                isOpen={isOpen}
+                                onClose={onClose}
                             >
-                                <Link className="text-white" href="">
-                                    info
-                                </Link>
-                            </Button>
+                                <ModalContent>
+                                    {(onClose) => (
+                                        <>
+                                            <ModalHeader className="flex items-center gap-5 mb-3">
+                                                <Avatar isBordered radius="full" size="md" src="https://www.fundacionaquae.org/wp-content/uploads/2018/10/proteger-a-los-animales.jpg" />
+                                                <p>Name pet</p>
+                                            </ModalHeader>
+                                            <ModalBody >
+                                                <article className="flex h-80">
+                                                    <section className="w-1/2 mr-16 mb-10 mt-5 flex items-center">
+                                                        <Image
+                                                            isZoomed
+                                                            alt="NextUI Fruit Image with Zoom"
+                                                            radius="lg"
+                                                            src="https://definicion.de/wp-content/uploads/2012/10/animal-1.jpg"
+                                                            width="100%"
+                                                        />
+                                                    </section>
+                                                    <section>
+                                                        <ScrollShadow hideScrollBar className="pb-2 w-[400px] h-[220px]">
+                                                            <InformationPet />
+                                                        </ScrollShadow>
+                                                        <div className="flex justify-center">
+                                                            <ButtonAdoption />
+                                                        </div>
+                                                    </section>
+
+                                                </article>
+                                            </ModalBody>
+                                        </>
+                                    )}
+                                </ModalContent>
+                            </Modal>
                         </CardFooter>
                     </div>
                 </Card>

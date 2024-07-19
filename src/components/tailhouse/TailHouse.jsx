@@ -53,7 +53,7 @@ export const TailHouse = () => {
                                 size="sm"
                                 onClick={() => handleHouseClick(house.id)}
                             >
-                                <Link color="warning" href="/tailhousedetail">
+                                <Link className="text-white font-lato" color="warning" href="/tailhousedetail">
                                     info
                                 </Link>
                             </Button>
