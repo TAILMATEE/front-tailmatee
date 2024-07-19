@@ -15,6 +15,41 @@ export const TailFriends = () => {
             tailFriend: "Daisy",
             typeOfPet: "Dog"
         },
+        {
+            imageProfile: "https://www.mistermascotas.com.mx/cdn/shop/articles/chi.jpg?v=1626977829",
+            tailFriend: "Daisy",
+            typeOfPet: "Dog"
+        },
+        {
+            imageProfile: "https://www.mistermascotas.com.mx/cdn/shop/articles/chi.jpg?v=1626977829",
+            tailFriend: "Daisy",
+            typeOfPet: "Dog"
+        },
+        {
+            imageProfile: "https://www.mistermascotas.com.mx/cdn/shop/articles/chi.jpg?v=1626977829",
+            tailFriend: "Daisy",
+            typeOfPet: "Dog"
+        },
+        {
+            imageProfile: "https://www.mistermascotas.com.mx/cdn/shop/articles/chi.jpg?v=1626977829",
+            tailFriend: "Daisy",
+            typeOfPet: "Dog"
+        },
+        {
+            imageProfile: "https://www.mistermascotas.com.mx/cdn/shop/articles/chi.jpg?v=1626977829",
+            tailFriend: "Daisy",
+            typeOfPet: "Dog"
+        },
+        {
+            imageProfile: "https://www.mistermascotas.com.mx/cdn/shop/articles/chi.jpg?v=1626977829",
+            tailFriend: "Daisy",
+            typeOfPet: "Dog"
+        },
+        {
+            imageProfile: "https://www.mistermascotas.com.mx/cdn/shop/articles/chi.jpg?v=1626977829",
+            tailFriend: "Daisy",
+            typeOfPet: "Dog"
+        },
     ];
 
     return (
@@ -23,7 +58,7 @@ export const TailFriends = () => {
             <Divider className="my-4 w-[200px]" />
             <div className="flex flex-wrap">
                 {tailFriends.map((data, index) => (
-                    <div key={index} className="flex items-center mr-10 w-fit">
+                    <div key={index} className="flex items-center mr-10 w-fit mb-5">
                         <User
                             name={data.tailFriend}
                             description={data.typeOfPet}
