@@ -2,6 +2,7 @@ import { NavHome } from '../../components/NavHome'
 import { ContentProfile } from '../../components/profile/ContentProfile'
 import { TailFriends } from '../../components/profile/TailFriends'
 import { Divider } from "@nextui-org/divider";
+import { Publications } from '../../components/profile/Publications';
 
 export const ProfilePage = () => {
     return (
@@ -14,7 +15,7 @@ export const ProfilePage = () => {
                     Publications
                 </h1>
                 <Divider className="my-4 max-w-7xl" />
-
+                <Publications />
             </main>
         </>
     )
