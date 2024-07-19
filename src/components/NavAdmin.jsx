@@ -33,12 +33,12 @@ import {
   
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link color="foreground" href="/admin">
               Denuncias
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="#">
+            <Link color="foreground" href="/tailhouse-requests">
               Solicitud de Tailhouse
             </Link>
           </NavbarItem>

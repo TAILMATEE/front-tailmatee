@@ -5,6 +5,7 @@ import { RegisterPage } from "./pages/register/registerPage";
 import { HomePage } from "./pages/homepage/homePage";
 import { ProfilePage } from "./pages/profile/profilePage";
 import { AdminPage } from "./pages/admin/AdminPage";
+import { TailHouseRequestPage } from "./pages/tailHouseRequests";
 
 const routes = useRoutes([
   { path: '/', element: <LoginPage /> },
@@ -12,6 +13,7 @@ const routes = useRoutes([
   { path: '/home', element: <HomePage /> },
   { path: '/profile', element: <ProfilePage /> },
   { path: '/admin', element: <AdminPage /> },
+  { path: '/tailhouse-requests', element: <TailHouseRequestPage /> },
 ]);
 
 export default routes;
