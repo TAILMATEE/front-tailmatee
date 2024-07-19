@@ -1,1 +1,1 @@
-import { TailHouseDetail } from "./tailHouseDetail";
+export { TailHouseDetail } from "./tailHouseDetail";
