@@ -9,3 +9,5 @@ export * from './validateLastname';
 export * from './validateUsername';
 
 export * from './validatePhone';
+
+export * from './validateConfirmPassword';

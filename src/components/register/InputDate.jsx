@@ -1,7 +1,10 @@
 import React from "react";
 import { DatePicker } from "@nextui-org/react";
 
-export const InputDate = () => {
+export const InputDate = (
+
+) => {
+
     return (
         <DatePicker
             className="max-w-xs mt-5 min-w-96"

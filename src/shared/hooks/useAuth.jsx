@@ -41,7 +41,7 @@ export const useAuth = () => {
 
         });
 
-        isLoading(false);
+        setIsLoading(false);
 
         if (response.error) {
             console.log(response.error);
@@ -131,8 +131,8 @@ export const useAuth = () => {
 
         isLoading,
         login,
-        logout
-
+        logout,
+        register
     }
 
 }
