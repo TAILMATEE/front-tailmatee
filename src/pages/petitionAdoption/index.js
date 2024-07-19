@@ -1,1 +1,1 @@
-import { PetitionAdoption } from './PetitionAdoption';
+export { PetitionAdoption } from './PetitionAdoption';

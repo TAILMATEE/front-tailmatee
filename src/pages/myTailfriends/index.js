@@ -1,1 +1,1 @@
-import { MyTailfriendsPage } from "./myTailfriendsPage";
+export { MyTailfriendsPage } from "./myTailfriendsPage";

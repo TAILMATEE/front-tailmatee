@@ -1,15 +1,6 @@
 import { DatePicker } from "@nextui-org/react";
 import { GeneralInput } from "../Input";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Divider,
-  Link,
-  Button,
-  Textarea,
-} from "@nextui-org/react";
+import { Link, Button, Textarea } from "@nextui-org/react";
 
 export const DenouncementForm = () => {
   return (

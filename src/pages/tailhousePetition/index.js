@@ -1,1 +1,1 @@
-import { TailhousePetitionPage } from "./tailhousePetitionPage";
+export { TailhousePetitionPage } from "./tailhousePetitionPage";
