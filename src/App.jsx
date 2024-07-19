@@ -10,6 +10,7 @@ import { LoginPage } from "./pages/login/loginPage.jsx";
 import { RegisterPage } from "./pages/register/registerPage.jsx";
 import { HomePage } from "./pages/homepage/homePage.jsx";
 import { TailhousePage } from "./pages/tailHouses/tailhousePage.jsx";
+import { TailHouseDetail } from "./pages/tailHouseDetail/tailHouseDetail.jsx";
 import "./index.css";
 
 function AppRoutes() {
@@ -18,6 +19,7 @@ function AppRoutes() {
     { path: "/register", element: <RegisterPage /> },
     { path: "/home", element: <HomePage /> },
     { path: "/tailhouse", element: <TailhousePage /> },
+    { path: "/tailhouse/:id", element: <TailHouseDetail />}
   ]);
   return routes;
 }
