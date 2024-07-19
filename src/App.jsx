@@ -19,6 +19,7 @@ import { MyTailfriendsPage } from "./pages/myTailfriends/myTailfriendsPage.jsx";
 import { PetitionAdoptionPage } from "./pages/petitionAdoption/petitionAdoptionPage.jsx";
 import { AdminPage } from "./pages/admin/AdminPage.jsx";
 import { TailHouseRequestPage } from "./pages/tailHouseRequests/tailHouseRequestPage.jsx";
+import { TailhousePetitionPage } from "./pages/tailhousePetition/tailhousePetitionPage.jsx";
 import "./index.css";
 
 function AppRoutes() {
@@ -35,6 +36,7 @@ function AppRoutes() {
     { path: "/petitionadoption", element: <PetitionAdoptionPage />},
     { path: "/admin", element: <AdminPage /> },
     { path: "/tailhouse-requests", element: <TailHouseRequestPage /> },
+    { path: "/tailhousepetition", element: <TailhousePetitionPage />}
   ]);
   return routes;
 }

@@ -12,6 +12,7 @@ import { DenouncementPage } from "./pages/denouncement";
 import { ProfilePage } from "./pages/profile/profilePage";
 import { MyTailfriendsPage } from "./pages/myTailfriends/myTailfriendsPage";
 import { PetitionAdoptionPage } from "./pages/petitionAdoption/petitionAdoptionPage"; 
+import { TailhousePetitionPage } from "./pages/tailhousePetition/tailhousePetitionPage";
 
 const routes = useRoutes([
   { path: '/', element: <LoginPage /> },
@@ -26,7 +27,8 @@ const routes = useRoutes([
   { path: "/denouncement", element: <DenouncementPage /> },
   { path: "/profile", element: <ProfilePage /> },
   { path: "/mytailfriends", element: <MyTailfriendsPage />},
-  { path: "/petitionadoption", element: <PetitionAdoptionPage />} 
+  { path: "/petitionadoption", element: <PetitionAdoptionPage />},
+  { path : "/tailhousepetition", element: <TailhousePetitionPage />},
 ]);
 
 
