@@ -1,9 +1,9 @@
 import React from "react";
 const columns = [
-  {name: "NAME", uid: "name"},
-  {name: "PET", uid: "pet"},
-  {name: "STATUS", uid: "status"},
-  {name: "ACTIONS", uid: "actions"},
+  {name: "Nombre", uid: "name"},
+  {name: "Animal", uid: "pet"},
+  {name: "Especie", uid: "specie"},
+  {name: "Acciones", uid: "actions"},
 ];
 
 const users = [
@@ -12,7 +12,7 @@ const users = [
     name: "Tony Reichert",
     pet: "Perro",
     specie: "Canino",
-    team: "Management",
+    race: "Labrador",
     status: "active",
     age: "29",
     avatar: "https://i.pravatar.cc/150?u=a042581f4e29026024d",
