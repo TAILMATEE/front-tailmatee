@@ -24,7 +24,7 @@ function AppRoutes() {
     { path: "/home", element: <HomePage /> },
     { path: "/tailhouse", element: <TailhousePage /> },
     { path: "/tailhousedetail", element: <TailHouseDetail />},
-    { path: "/adoption", element: <AdoptionPage />}
+    { path: "/adoption", element: <AdoptionPage />},
     { path: "/denouncement", element: <DenouncementPage /> },
     { path: "/profile", element: <ProfilePage /> },
   ]);
