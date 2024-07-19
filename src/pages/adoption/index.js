@@ -1,1 +1,1 @@
-import { AdoptionPage } from "./adoptionPage";
+export { AdoptionPage } from "./adoptionPage";
