@@ -1,0 +1,1 @@
+export { DenouncementPage } from "./denouncementPage.jsx";
