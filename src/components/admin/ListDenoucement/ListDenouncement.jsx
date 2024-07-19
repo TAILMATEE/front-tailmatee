@@ -1,12 +1,25 @@
-import React from "react";
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, User, Chip, Tooltip, getKeyValue } from "@nextui-org/react";
-import AproveIcon  from "../../../assets/Icons/AdminIcons/AproveIcon.svg";
+import React, { useState, useCallback } from "react";
+import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, User, Chip, Tooltip, Button, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/react";
+import AproveIcon from "../../../assets/Icons/AdminIcons/AproveIcon.svg";
 import { EyeIcon } from "../../../assets/Icons/AdminIcons/EyeIcon.jsx";
 import { DeleteIcon } from "../../../assets/Icons/AdminIcons/DeleteIcon.jsx";
 import { columns, users } from "./data.js";
 
 export const ListDenouncement = () => {
-    const renderCell = React.useCallback((user, columnKey) => {
+    const [visible, setVisible] = useState(false);
+    const [selectedUser, setSelectedUser] = useState(null);
+
+    const openModal = (user) => {
+        setSelectedUser(user);
+        setVisible(true);
+    };
+
+    const closeModal = () => {
+        setVisible(false);
+        setSelectedUser(null);
+    };
+
+    const renderCell = useCallback((user, columnKey) => {
         const cellValue = user[columnKey];
 
         switch (columnKey) {
@@ -24,7 +37,6 @@ export const ListDenouncement = () => {
                 return (
                     <div className="flex flex-col">
                         <p className="text-bold text-sm capitalize">{cellValue}</p>
-                        <p className="text-sm text-default-400 text-wrap w-96 ">{user.descripcionAbuso}</p>
                     </div>
                 );
             case "fecha":
@@ -36,8 +48,8 @@ export const ListDenouncement = () => {
             case "opciones":
                 return (
                     <div className="relative flex items-center gap-2">
-                        <Tooltip content="Detalles" >
-                            <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
+                        <Tooltip content="Detalles">
+                            <span className="text-lg text-default-400 cursor-pointer active:opacity-50" onClick={() => openModal(user)}>
                                 <EyeIcon />
                             </span>
                         </Tooltip>
@@ -59,21 +71,39 @@ export const ListDenouncement = () => {
     }, []);
 
     return (
-        <Table aria-label="Example table with custom cells" className="w-[80%] mx-auto mt-14"> 
-            <TableHeader columns={columns}>
-                {(column) => (
-                    <TableColumn key={column.uid} align={column.uid === "actions" ? "center" : "start"}>
-                        {column.name}
-                    </TableColumn>
-                )}
-            </TableHeader>
-            <TableBody items={users}>
-                {(item) => (
-                    <TableRow key={item.id}>
-                        {(columnKey) => <TableCell>{renderCell(item, columnKey)}</TableCell>}
-                    </TableRow>
-                )}
-            </TableBody>
-        </Table>
+        <>
+            <Table aria-label="Example table with custom cells" className="w-[80%] mx-auto mt-14">
+                <TableHeader columns={columns}>
+                    {(column) => (
+                        <TableColumn key={column.uid} align={column.uid === "actions" ? "center" : "start"}>
+                            {column.name}
+                        </TableColumn>
+                    )}
+                </TableHeader>
+                <TableBody items={users}>
+                    {(item) => (
+                        <TableRow key={item.id}>
+                            {(columnKey) => <TableCell>{renderCell(item, columnKey)}</TableCell>}
+                        </TableRow>
+                    )}
+                </TableBody>
+            </Table>
+            {selectedUser && (
+                <Modal isOpen={visible} onClose={closeModal} backdrop="blur">
+                    <ModalContent>
+                        <ModalHeader className="flex flex-col gap-1">Detalles de la denuncia de: {selectedUser.usuario}</ModalHeader>
+                        <ModalBody>
+                            <p>{selectedUser.descripcionAbuso}</p>
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button color="danger" variant="light" onClick={closeModal}>
+                                Cerrar
+                            </Button>
+                        </ModalFooter>
+                    </ModalContent>
+                </Modal>
+            )}
+        </>
     );
-}
+};
+
