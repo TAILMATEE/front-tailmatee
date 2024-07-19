@@ -14,8 +14,8 @@ import {
 export const DenouncementForm = () => {
   return (
     <>
-      <section className="p-20">
-        <Card className="w-auto h-full">
+      <section className="p-20 justify-center">
+        <Card className="w-auto h-full justify-center">
           <CardHeader className="flex gap-3">
             <div className="flex flex-col">
               <p className="font-lato text-blue font-bold">
@@ -25,10 +25,10 @@ export const DenouncementForm = () => {
             </div>
           </CardHeader>
           <Divider />
-          <CardBody>
-            <div className="flex flex-row flex-wrap gap-2 items-center justify-around mb-6">
+          <CardBody className="justify-center items-center">
+            <div className="flex flex-col justify-center">
               <DatePicker
-                className="max-w-md"
+                className="mt-5 max-w-screen-sm"
                 granularity="second"
                 label="Fecha y hora del abuso"
               />
@@ -37,19 +37,17 @@ export const DenouncementForm = () => {
                 label="Ubicación exacta del abuso"
                 placeholder="Ingresa la dirección"
                 isRequired
-                className={"max-w-md"}
+                className={"mt-5 max-w-screen-sm"}
                 isClearable
                 onClear={() => console.log("Clear")}
                 color="default"
               />
-            </div>
-            <div className="flex flex-row flex-wrap gap-2 items-center justify-around mb-6">
               <GeneralInput
                 type="text"
                 label="Tipo de mascota"
                 placeholder="Perro, gato, etc."
                 isRequired
-                className={"max-w-md"}
+                className={"mt-5 max-w-screen-sm"}
                 isClearable
                 onClear={() => console.log("Clear")}
                 color="default"
@@ -59,26 +57,21 @@ export const DenouncementForm = () => {
                 label="Tipo de abuso"
                 placeholder="Violencia, abandono, etc."
                 isRequired
-                className={"max-w-md"}
+                className={"mt-5 max-w-screen-sm"}
                 isClearable
                 onClear={() => console.log("Clear")}
                 color="default"
               />
-            </div>
-
-            <div className="flex flex-row flex-wrap gap-2 items-center justify-around mb-6">
               <Textarea
                 isRequired
                 label="Descripción del abuso"
                 labelPlacement="outside"
                 placeholder="Describe de manera detallada el abuso"
-                className="max-w-xl"
+                className="mt-5 max-w-screen-sm"
               />
-            </div>
-            <div className="flex justify-center items-center">
               <Button
                 radius="full"
-                className="max-w-xs mb-4 min-w-96 h-12"
+                className="max-w-xs mb-4 min-w-96 h-12 mt-5"
                 color="warning"
               >
                 Enviar denuncia
