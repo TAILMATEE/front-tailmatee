@@ -1,8 +1,9 @@
 import React from "react";
 import { DatePicker } from "@nextui-org/react";
 
-export const InputDate = (
-
+export const InputDate = ({
+    ...props
+}
 ) => {
 
     return (
@@ -10,6 +11,8 @@ export const InputDate = (
             className="max-w-xs mt-5 min-w-96"
             isClearable
             labelPlacement="outside"
+            aria-label="date"
+            {...props}
         />
     );
 }

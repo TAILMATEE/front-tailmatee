@@ -187,13 +187,9 @@ export const FormRegister = () => {
 
   };
 
-  const handleSelect = (event) => {
-
-    event.preventDefault();
-
-    setSelectTypeAccount(event.target.value);
-
-  }
+  const handleSelect = (value) => {
+    formState.gender.value=value.target.value;
+  };
 
   const handleRegister = (event) => {
 
@@ -209,7 +205,7 @@ export const FormRegister = () => {
 
       formState.birthdate.value,
 
-      selectTypeAccount,
+      formState.gender.value,
 
       formState.email.value,
 
@@ -226,6 +222,7 @@ export const FormRegister = () => {
   return (
     <form className="justify-items-center">
       <GeneralInput
+        aria-label="name"
         type="name"
         label="Nombres"
         placeholder="Ingresa tus nombres"
@@ -247,6 +244,7 @@ export const FormRegister = () => {
         }
       />
       <GeneralInput
+        aria-label="lastname"
         type="name"
         label="Apellidos"
         placeholder="Ingresa tus apellidos"
@@ -269,20 +267,23 @@ export const FormRegister = () => {
       />
 
       <Select
+        aria-label='gender'
         isRequired
         label="Género"
         placeholder="Selecciona tu género"
         className={"max-w-xs mt-5 min-w-96 "}
-        name="type"
-        onChange={handleInputValueChange}
+        name="gender"
+        id="gender"
+        value={formState.gender.value}
+        onChange={handleSelect}
         onBlur={handleInputValidationOnBlur}
-        onClick={handleSelect}
       >
-        <SelectItem value="male">Hombre</SelectItem>
-        <SelectItem value="female">Mujer</SelectItem>
+        <SelectItem value="male" key='male'>Hombre</SelectItem>
+        <SelectItem value="female" key="female">Mujer</SelectItem>
       </Select>
 
       <GeneralInput
+        aria-label="email"
         type="email"
         label="Correo"
         placeholder="Ingresa tu correo electronico"
@@ -303,6 +304,7 @@ export const FormRegister = () => {
         }
       />
       <GeneralInput
+        
         type="userName"
         label="Nombre Usuario"
         placeholder="Ingresa tu nombre de usuario"
@@ -345,9 +347,8 @@ export const FormRegister = () => {
       />
       <InputDate 
         field='birthdate'
-        value={formState.birthdate.value}
-        onChange={handleInputValueChange}
         onBlur={handleInputValidationOnBlur}
+        onChange={(value) => (formState.birthdate.value =(`${value.month}/${value.day}/${value.year}`))}
       />
       <GeneralInput
         type="password"

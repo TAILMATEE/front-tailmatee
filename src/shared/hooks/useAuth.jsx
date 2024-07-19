@@ -27,6 +27,7 @@ export const useAuth = () => {
     ) => {
 
         setIsLoading(true);
+        console.log(name, lastname, username, birthdate,gender,email,password,phone);
 
         const response = await registerRequest({
             
