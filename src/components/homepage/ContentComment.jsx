@@ -51,7 +51,6 @@ export const ContentComment = () => {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
   ];
-
   return (
     <section>
       <div>

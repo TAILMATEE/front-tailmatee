@@ -1,0 +1,1 @@
+import { TailHouseDetail } from "./tailHouseDetail";
