@@ -19,7 +19,7 @@ export const DenouncementForm = () => {
           <CardHeader className="flex gap-3">
             <div className="flex flex-col">
               <p className="font-lato text-blue font-bold">
-                Fecha, hora y lugar del abuso
+                Datos de la dennuncia
               </p>
               <p className="text-small text-default-500">Ingresa los datos</p>
             </div>
