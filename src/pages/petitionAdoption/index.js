@@ -1,0 +1,1 @@
+import { PetitionAdoption } from './PetitionAdoption';
