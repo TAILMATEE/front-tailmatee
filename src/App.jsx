@@ -19,7 +19,7 @@ function AppRoutes() {
     { path: "/register", element: <RegisterPage /> },
     { path: "/home", element: <HomePage /> },
     { path: "/tailhouse", element: <TailhousePage /> },
-    { path: "/tailhouse/:id", element: <TailHouseDetail />}
+    { path: "/tailhousedetail", element: <TailHouseDetail />}
   ]);
   return routes;
 }
