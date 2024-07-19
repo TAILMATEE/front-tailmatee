@@ -1,17 +1,20 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import { login as loginRequest, register as registerRequest} from '../../services/api';
 
 export const useAuth = () => {
+  const [isLoading, setIsLoading] = useState(false);
 
+  const navigate = useNavigate();
 
-    const [isLoading, setIsLoading] = useState(false);
+  const login = async (usernameOrEmail, password) => {
+    setIsLoading(true);
 
-    const navigate = useNavigate();
+    const response = await loginRequest({ usernameOrEmail, password });
 
     const register = async (
 
@@ -120,15 +123,23 @@ export const useAuth = () => {
 
     };
 
-    const logout = () => {
 
-        localStorage.removeItem('token');
+    const { tailUser, token } = response.data;
 
-        navigate('/');
+    localStorage.setItem(
+      "token",
+      JSON.stringify({
+        token,
+        role: tailUser.role,
+      })
+    );
 
-    }
+    setIsLoading(false);
 
-    return {
+    navigate("/home");
+
+    return toast.success(`${response.data.msg}`);
+  };
 
         isLoading,
         login,
@@ -136,4 +147,10 @@ export const useAuth = () => {
         register
     }
 
-}
+
+  return {
+    isLoading,
+    login,
+    logout,
+  };
+};

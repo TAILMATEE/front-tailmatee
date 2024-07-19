@@ -1,13 +1,12 @@
 export const validateUsernameOrEmail = (usernameOrEmail) => {
-    if (usernameOrEmail.includes('@')) {
-      const regex = /\S+@\S+\.\S+/
-  
-      return regex.test(usernameOrEmail)
-    } else {
-      const regex = /^\S{3,25}$/
-  
-      return regex.test(usernameOrEmail)
-    }
+  if (usernameOrEmail.includes("@")) {
+    const regex = /\S+@\S+\.\S+/;
+
+    return regex.test(usernameOrEmail);
+  } else {
+    const regex = /^\S{3,25}$/;
+
+    return regex.test(usernameOrEmail);
   }
   
   export const validateUsernameOrEmailMessage =

@@ -1,0 +1,1 @@
+import { AdoptionPage } from "./adoptionPage";

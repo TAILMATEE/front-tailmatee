@@ -235,6 +235,7 @@ export const FormRegister = () => {
         onBlurHandler={handleInputValidationOnBlur}
         showErrorMessage={formState.name.showError}
         validationMessage={validateNameMessage}
+
         startContent={
           <img
             src={UserName}
@@ -295,6 +296,7 @@ export const FormRegister = () => {
         onChangeHandler={handleInputValueChange}
         onBlurHandler={handleInputValidationOnBlur}
         showErrorMessage={formState.email.showError}
+
         onClear={() => console.log("Clear")}
         startContent={
           <MailIcon
@@ -305,6 +307,7 @@ export const FormRegister = () => {
       />
       <GeneralInput
         
+
         type="userName"
         label="Nombre Usuario"
         placeholder="Ingresa tu nombre de usuario"
@@ -316,6 +319,7 @@ export const FormRegister = () => {
         onChangeHandler={handleInputValueChange}
         onBlurHandler={handleInputValidationOnBlur}
         showErrorMessage={formState.username.showError}
+
         startContent={
           <img
             src={UserName}
@@ -337,6 +341,7 @@ export const FormRegister = () => {
         onBlurHandler={handleInputValidationOnBlur}
         showErrorMessage={formState.phone.showError}
         validationMessage={validatePhoneMessage}
+
         startContent={
           <img
             src={Cell}
@@ -363,6 +368,7 @@ export const FormRegister = () => {
         onBlurHandler={handleInputValidationOnBlur}
         showErrorMessage={formState.password.showError}
         validationMessage={validatePasswordMessage}
+
         startContent={
           <img
             src={Password}
@@ -384,6 +390,7 @@ export const FormRegister = () => {
         onBlurHandler={handleInputValidationOnBlur}
         showErrorMessage={formState.confirmPassword.showError}
         validationMessage={validateConfirmPasswordMessage}
+
         startContent={
           <img
             src={Password}

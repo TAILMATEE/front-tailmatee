@@ -6,3 +6,4 @@ export const validatePassword = (password) => {
   
   export const validatePasswordMessage =
     'Uno de los parámetros necesarios falta: una letra mayúscula, un número del 1 al 9, un carácter especial, mínimo 6 caracteres.'
+
