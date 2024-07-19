@@ -12,17 +12,25 @@ import {
 } from "@nextui-org/react";
 import logo from "../assets/img/logoWhite.svg";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../shared/hooks";
 
 export const NavHome = () => {
+
+  const { logout } = useAuth();
+  
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    navigate("/");
-  };
+  const handleProfile = () => {
+    navigate('/profile')
+  }
+
+  const handleHome = () => {
+    navigate('/home')
+  }
 
   return (
     <Navbar className="bg-yellow w-full h-24">
-      <NavbarBrand>
+      <NavbarBrand onClick={handleHome} className="cursor-pointer">
         <img src={logo} alt="logo" className="w-[25px] h-[25px] mr-2.5" />
         <h1 className="font-sansita text-h3 text-blue">Tailmatee</h1>
       </NavbarBrand>
@@ -63,8 +71,8 @@ export const NavHome = () => {
               <p className="font-semibold">Bienvenid@ 👋</p>
               <p className="font-semibold">zoey@example.com</p>
             </DropdownItem>
-            <DropdownItem key="settings">Mi perfil</DropdownItem>
-            <DropdownItem key="logout" color="danger" onClick={handleLogout}>
+            <DropdownItem key="profile" onClick={handleProfile}>Mi perfil</DropdownItem>
+            <DropdownItem key="logout" color="danger" onClick={logout}>
               Cerrar Sesión
             </DropdownItem>
           </DropdownMenu>

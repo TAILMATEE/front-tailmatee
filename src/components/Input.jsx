@@ -1,6 +1,6 @@
 import React from "react";
 import { input, Input } from "@nextui-org/react";
-
+ 
 export const GeneralInput = ({
     isRequired,
     isClearable,
@@ -12,21 +12,50 @@ export const GeneralInput = ({
     className,
     startContent,
     color,
-    labelPlacement
+    labelPlacement,
+    value,
+    field,
+    onChangeHandler,
+    showErrorMessage,
+    validationMessage,
+    onBlurHandler,
+        ...restProps
 }) => {
+ 
+    const handleValueChange = (event) => {
+ 
+        onChangeHandler(event.target.value, field);
+ 
+    }
+ 
+    const handleInputBlur = (event) => {
+        onBlurHandler(event.target.value, field);
+      };
+ 
     return (
-        <Input
-            isRequired={isRequired}
-            isClearable={isClearable}
-            type={type}
-            label={label}
-            variant={variant}
-            placeholder={placeholder}
-            onClear={onClear}
-            className={className}
-            startContent={startContent}
-            color={color}
-            labelPlacement={labelPlacement}
-        />
+        <>
+            <div>
+                <Input
+                    isRequired={isRequired}
+                    isClearable={isClearable}
+                    type={type}
+                    label={label}
+                    variant={variant}
+                    placeholder={placeholder}
+                    onClear={onClear}
+                    className={className}
+                    startContent={startContent}
+                    color={color}
+                    labelPlacement={labelPlacement}
+                    value={value}
+                    onChange={handleValueChange}
+                    onBlur={handleInputBlur}
+                    {...restProps}
+                />
+                <span>
+                    {showErrorMessage && validationMessage}
+                </span>
+            </div>
+        </>
     );
 }
