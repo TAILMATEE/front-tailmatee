@@ -12,13 +12,11 @@ import {
 } from "@nextui-org/react";
 import logo from "../assets/img/logoWhite.svg";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../shared/hooks";
 
 export const NavHome = () => {
-  const navigate = useNavigate();
 
-  const handleLogout = () => {
-    navigate("/");
-  };
+  const { logout } = useAuth();
 
   const handleProfile = () => {
     navigate('/profile')
@@ -68,7 +66,7 @@ export const NavHome = () => {
               <p className="font-semibold">zoey@example.com</p>
             </DropdownItem>
             <DropdownItem key="profile" onClick={handleProfile}>Mi perfil</DropdownItem>
-            <DropdownItem key="logout" color="danger" onClick={handleLogout}>
+            <DropdownItem key="logout" color="danger" onClick={logout}>
               Cerrar Sesión
             </DropdownItem>
           </DropdownMenu>
