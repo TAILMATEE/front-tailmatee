@@ -52,6 +52,33 @@ const users = [
         avatar: "https://i.pravatar.cc/150?u=a092581d4ef9026700d",
         email: "kristen.cooper@example.com",
     },
+    {
+        id: 5,
+        manager: "Kristen Copper",
+        tAbuso: "Falta de alimentación",
+        descripcionAbuso: "No se les da de comer a los animalitos",
+        fecha: "2024-01-01",
+        avatar: "https://i.pravatar.cc/150?u=a092581d4ef9026700d",
+        email: "kristen.cooper@example.com",
+    },
+    {
+        id: 5,
+        manager: "Kristen Copper",
+        tAbuso: "Falta de alimentación",
+        descripcionAbuso: "No se les da de comer a los animalitos",
+        fecha: "2024-01-01",
+        avatar: "https://i.pravatar.cc/150?u=a092581d4ef9026700d",
+        email: "kristen.cooper@example.com",
+    },
+    {
+        id: 5,
+        manager: "Kristen Copper",
+        tAbuso: "Falta de alimentación",
+        descripcionAbuso: "No se les da de comer a los animalitos",
+        fecha: "2024-01-01",
+        avatar: "https://i.pravatar.cc/150?u=a092581d4ef9026700d",
+        email: "kristen.cooper@example.com",
+    },
 ];
 
 export { columns, users };
