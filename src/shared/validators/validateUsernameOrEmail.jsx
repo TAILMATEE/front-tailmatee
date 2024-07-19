@@ -8,7 +8,6 @@ export const validateUsernameOrEmail = (usernameOrEmail) => {
 
     return regex.test(usernameOrEmail);
   }
-};
-
-export const validateUsernameOrEmailMessage =
-  "The username need to be between 3 and 25 characters long | The email need to be valid";
+  
+  export const validateUsernameOrEmailMessage =
+    'El nombre de usuario debe tener entre 3 y 25 caracteres de longitud | El correo electrónico debe ser válido.'

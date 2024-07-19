@@ -15,21 +15,23 @@ apiClient.interceptors.request.use(
       config.headers.Authorization = `${token}`;
     }
 
-    return config;
-  },
+}
 
-  (e) => {
-    return Promise.reject(e);
-  }
-);
+export const register = async(data) => {
+    
+    try{
 
-export const login = async (data) => {
-  try {
-    return await apiClient.post("/auth/login/", data);
-  } catch (e) {
-    return {
-      error: true,
-      e,
-    };
-  }
-};
+        return await apiClient.post('/auth/register/', data);
+
+    }catch(e){
+
+        return{
+
+            error: true,
+            e,
+
+        }
+
+    }
+
+}
