@@ -19,6 +19,26 @@ export const TailHouse = () => {
             name: "House 3",
             image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3t0p3xGvAq0i3Drs7EjQsYo3hLzyCxnwmg&s",
         },
+        {
+            id: 4,
+            name: "House 3",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3t0p3xGvAq0i3Drs7EjQsYo3hLzyCxnwmg&s",
+        },
+        {
+            id: 3,
+            name: "House 3",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3t0p3xGvAq0i3Drs7EjQsYo3hLzyCxnwmg&s",
+        },
+        {
+            id: 3,
+            name: "House 3",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3t0p3xGvAq0i3Drs7EjQsYo3hLzyCxnwmg&s",
+        },
+        {
+            id: 3,
+            name: "House 3",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3t0p3xGvAq0i3Drs7EjQsYo3hLzyCxnwmg&s",
+        },
 
     ];
 
@@ -29,7 +49,7 @@ export const TailHouse = () => {
                     key={house.id}
                     isFooterBlurred
                     radius="lg"
-                    className="border-none w-[300px] h-[280px]"
+                    className="border-none w-[300px] h-[280px] my-5 mx-8"
                 >
                     <div className="aspect-w-3 aspect-h-2">
                         <Image
@@ -41,7 +61,7 @@ export const TailHouse = () => {
                     <div>
                         <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
                             <p className="text-tiny text-white/80">{house.name}</p>
-                            <Button className="text-tiny text-white bg-black" variant="flat" color="secondary" radius="lg" size="sm">
+                            <Button className="text-tiny text-white bg-blue" variant="flat" color="secondary" radius="lg" size="sm" href="/detailhouse">
                                 info
                             </Button>
                         </CardFooter>

@@ -6,7 +6,7 @@ export const TailhousePage = () => {
         <>
             <NavHome />
             <main>
-                <div>
+                <div className="flex flex-wrap items-start px-52">
                     <TailHouse />
                 </div>
             </main>
