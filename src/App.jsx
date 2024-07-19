@@ -11,6 +11,7 @@ import { RegisterPage } from "./pages/register/registerPage.jsx";
 import { HomePage } from "./pages/homepage/homePage.jsx";
 import { TailhousePage } from "./pages/tailHouses/tailhousePage.jsx";
 import { TailHouseDetail } from "./pages/tailHouseDetail/tailHouseDetail.jsx";
+import { AdoptionPage } from "./pages/adoption/adoptionPage.jsx";
 import "./index.css";
 
 function AppRoutes() {
@@ -19,7 +20,8 @@ function AppRoutes() {
     { path: "/register", element: <RegisterPage /> },
     { path: "/home", element: <HomePage /> },
     { path: "/tailhouse", element: <TailhousePage /> },
-    { path: "/tailhousedetail", element: <TailHouseDetail />}
+    { path: "/tailhousedetail", element: <TailHouseDetail />},
+    { path: "/adoption", element: <AdoptionPage />}
   ]);
   return routes;
 }
