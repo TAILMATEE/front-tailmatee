@@ -70,6 +70,12 @@ export const NavHome = () => {
               <p className="font-semibold">Bienvenid@ 👋</p>
               <p className="font-semibold">zoey@example.com</p>
             </DropdownItem>
+            <DropdownItem key="profile" href="/tailhousepetition">
+              Petición de tailhouse
+            </DropdownItem>
+            <DropdownItem key="profile" href="/mytailfriends">
+              Mi Tailhouse
+            </DropdownItem>
             <DropdownItem key="profile" onClick={handleProfile}>
               Mi perfil
             </DropdownItem>

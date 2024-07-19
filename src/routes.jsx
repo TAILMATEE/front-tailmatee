@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useRoutes } from "react-router-dom/dist";
 import { LoginPage } from "./pages/login/loginPage";
 import { RegisterPage } from "./pages/register/registerPage";
@@ -9,7 +8,12 @@ import { TailHouseRequestPage } from "./pages/tailHouseRequests";
 import { TailhousePage } from "./pages/tailhouse";
 import { TailHouseDetail } from "./pages/tailHouseDetail/tailHouseDetail";
 import { AdoptionPage } from "./pages/adoption/adoptionPage";
-¿
+import { DenouncementPage } from "./pages/denouncement";
+import { ProfilePage } from "./pages/profile/profilePage";
+import { MyTailfriendsPage } from "./pages/myTailfriends/myTailfriendsPage";
+import { PetitionAdoptionPage } from "./pages/petitionAdoption/petitionAdoptionPage"; 
+import { TailhousePetitionPage } from "./pages/tailhousePetition/tailhousePetitionPage";
+
 const routes = useRoutes([
   { path: '/', element: <LoginPage /> },
   { path: '/register', element: <RegisterPage /> },
@@ -18,18 +22,15 @@ const routes = useRoutes([
   { path: '/admin', element: <AdminPage /> },
   { path: '/tailhouse-requests', element: <TailHouseRequestPage /> },
   { path: '/tailhouse', element: <TailhousePage /> },
-  { path: '/tailhousedetail/:id', element: <TailHouseDetail />},
-  { path: '/adoption', element: <AdoptionPage />}
-  
-import { DenouncementPage } from "./pages/denouncement";
-import { ProfilePage } from "./pages/profile/profilePage";
-
-const routes = useRoutes([
-  { path: "/", element: <LoginPage /> },
-  { path: "/register", element: <RegisterPage /> },
-  { path: "/home", element: <HomePage /> },
+  { path: '/tailhousedetail/:id', element: <TailHouseDetail /> },
+  { path: '/adoption', element: <AdoptionPage /> },
   { path: "/denouncement", element: <DenouncementPage /> },
   { path: "/profile", element: <ProfilePage /> },
+  { path: "/mytailfriends", element: <MyTailfriendsPage />},
+  { path: "/petitionadoption", element: <PetitionAdoptionPage />},
+  { path : "/tailhousepetition", element: <TailhousePetitionPage />},
 ]);
+
+
 
 export default routes;
