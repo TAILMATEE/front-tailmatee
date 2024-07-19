@@ -17,6 +17,8 @@ import { DenouncementPage } from "./pages/denouncement/denouncementPage.jsx";
 import { ProfilePage } from "./pages/profile/profilePage.jsx";
 import { MyTailfriendsPage } from "./pages/myTailfriends/myTailfriendsPage.jsx";
 import { PetitionAdoptionPage } from "./pages/petitionAdoption/petitionAdoptionPage.jsx";
+import { AdminPage } from "./pages/admin/AdminPage.jsx";
+import { TailHouseRequestPage } from "./pages/tailHouseRequests/tailHouseRequestPage.jsx";
 import "./index.css";
 
 function AppRoutes() {
@@ -30,7 +32,9 @@ function AppRoutes() {
     { path: "/denouncement", element: <DenouncementPage /> },
     { path: "/profile", element: <ProfilePage /> },
     { path: "/mytailfriends", element: <MyTailfriendsPage /> },
-    { path: "/petitionadoption", element: <PetitionAdoptionPage />}
+    { path: "/petitionadoption", element: <PetitionAdoptionPage />},
+    { path: "/admin", element: <AdminPage /> },
+    { path: "/tailhouse-requests", element: <TailHouseRequestPage /> },
   ]);
   return routes;
 }
