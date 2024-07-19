@@ -116,7 +116,6 @@ export const useAuth = () => {
 
         navigate('/home');
 
-        return toast.success(`${response.data.msg}`);
 
     };
 
