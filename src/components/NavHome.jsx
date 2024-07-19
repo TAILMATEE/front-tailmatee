@@ -15,18 +15,17 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../shared/hooks";
 
 export const NavHome = () => {
-
   const { logout } = useAuth();
-  
+
   const navigate = useNavigate();
 
   const handleProfile = () => {
-    navigate('/profile')
-  }
+    navigate("/profile");
+  };
 
   const handleHome = () => {
-    navigate('/home')
-  }
+    navigate("/home");
+  };
 
   return (
     <Navbar className="bg-yellow w-full h-24">
@@ -71,7 +70,9 @@ export const NavHome = () => {
               <p className="font-semibold">Bienvenid@ 👋</p>
               <p className="font-semibold">zoey@example.com</p>
             </DropdownItem>
-            <DropdownItem key="profile" onClick={handleProfile}>Mi perfil</DropdownItem>
+            <DropdownItem key="profile" onClick={handleProfile}>
+              Mi perfil
+            </DropdownItem>
             <DropdownItem key="logout" color="danger" onClick={logout}>
               Cerrar Sesión
             </DropdownItem>

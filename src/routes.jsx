@@ -7,11 +7,11 @@ import { DenouncementPage } from "./pages/denouncement";
 import { ProfilePage } from "./pages/profile/profilePage";
 
 const routes = useRoutes([
-  { path: '/', element: <LoginPage /> },
-  { path: '/register', element: <RegisterPage /> },
-  { path: '/home', element: <HomePage /> },
-  { path: '/denouncement', element: <DenouncementPage /> },
-  { path: '/profile', element: <ProfilePage /> }
+  { path: "/", element: <LoginPage /> },
+  { path: "/register", element: <RegisterPage /> },
+  { path: "/home", element: <HomePage /> },
+  { path: "/denouncement", element: <DenouncementPage /> },
+  { path: "/profile", element: <ProfilePage /> },
 ]);
 
 export default routes;
