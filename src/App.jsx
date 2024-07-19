@@ -10,6 +10,7 @@ import { LoginPage } from "./pages/login/loginPage.jsx";
 import { RegisterPage } from "./pages/register/registerPage.jsx";
 import { HomePage } from "./pages/homepage/homePage.jsx";
 import { ProfilePage } from "./pages/profile/profilePage.jsx";
+import { AdminPage } from "./pages/admin/AdminPage.jsx";
 import "./index.css";
 
 function AppRoutes() {
@@ -18,6 +19,7 @@ function AppRoutes() {
     { path: "/register", element: <RegisterPage /> },
     { path: "/home", element: <HomePage /> },
     { path: "/profile", element: <ProfilePage /> },
+    { path: "/admin", element: <AdminPage /> },
   ]);
   return routes;
 }
